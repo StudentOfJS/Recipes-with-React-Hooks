@@ -87,7 +87,7 @@ export default () => {
   return (
     <Fragment>
       <Header />
-      <main className="flex">
+      <main className="px4 flex">
         <Suspense
           maxDuration={800}
           fallback={
@@ -103,6 +103,7 @@ export default () => {
           />
         </Suspense>
         <RecipeDetail
+          className="ml4"
           style={{ flex: 5 }}
           detail={recipeDetail[recipeDetail.current]}
           error={recipeDetail.error}

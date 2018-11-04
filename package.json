@@ -35,6 +35,7 @@
     "basscss": "^8.0.10",
     "basscss-background-colors": "^2.1.0",
     "basscss-colors": "^2.2.0",
+    "classnames": "^2.2.6",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0",
     "whatwg-fetch": "^3.0.0"
