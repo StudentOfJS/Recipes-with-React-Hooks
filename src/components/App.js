@@ -4,6 +4,7 @@ import Header from './Header';
 
 const Home = lazy(() => import('./Home'));
 const Favorites = lazy(() => import('./Favorites'));
+const NotFound = lazy(() => import('./NotFound'));
 
 const App = () => (
   <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => (
           <Redirect from="/home" to="/" />
           <Route exact path="/" component={Home} />
           <Route path="/favorites" component={Favorites} />
+          <Route component={NotFound} />
         </Suspense>
       </Switch>
     </main>
