@@ -1,3 +1,37 @@
 .pointer {
   cursor: pointer;
 }
+
+.menu-button {
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: transparent;
+  color: var(--black);
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.menu-button:hover,
+.menu-button:focus {
+  background: #0053ba;
+  color: var(--lime);
+}
+
+.menu-button:focus {
+  outline: 2px solid var(--lime);
+  outline-offset: -6px;
+}
+
+.menu-button:active {
+  transform: scale(0.99);
+}

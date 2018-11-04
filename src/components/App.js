@@ -1,115 +1,26 @@
-import React, {
-  Fragment,
-  useReducer,
-  useEffect,
-  memo,
-  lazy,
-  Suspense
-} from "react";
-import { fetch } from "whatwg-fetch";
-import Header from "./Header";
-import RecipeDetail from "./Recipe/RecipeDetail";
-const RecipeList = lazy(() => import("./Recipe/RecipeList"));
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import Header from './Header';
 
-const recipesReducer = (state, action) => {
-  switch (action.type) {
-    case "ADD":
-      return action.payload;
-    case "ERROR":
-      return state;
-    default:
-      return state;
-  }
-};
+const Home = lazy(() => import('./Home'));
+const Favorites = lazy(() => import('./Favorites'));
 
-const recipeDetailReducer = (state, action) => {
-  switch (action.type) {
-    case "LOADING":
-      return {
-        ...state,
-        loading: true
-      };
-    case "CHANGE":
-      return {
-        ...state,
-        current: action.id,
-        loading: false
-      };
-    case "ADD":
-      return {
-        ...state,
-        [action.id]: action.payload,
-        current: action.id,
-        loading: false
-      };
-    case "ERROR":
-      return {
-        ...state,
-        error: action.error,
-        loading: false
-      };
-    default:
-      state;
-  }
-};
-
-export default () => {
-  const [recipes, dispatch] = useReducer(recipesReducer, []);
-  const [recipeDetail, dispatchDetail] = useReducer(recipeDetailReducer, {
-    loading: false,
-    error: ""
-  });
-
-  useEffect(
-    () => {
-      fetch(`http://reactrecipes.herokuapp.com/v1/recipes`)
-        .then(res => res.json())
-        .then(payload => dispatch({ type: "ADD", payload }))
-        .catch(error => dispatch({ type: "ERROR", error }));
-    },
-    [recipes]
-  );
-
-  const onRecipeClick = id => {
-    if (recipeDetail.current === id) return;
-    const recipeExists = recipeDetail[id];
-    if (!!recipeExists) {
-      dispatchDetail({ type: "CHANGE", id });
-    } else {
-      dispatchDetail({ type: "LOADING" });
-      fetch(`http://reactrecipes.herokuapp.com/v1/recipes/${id}`)
-        .then(res => res.json())
-        .then(payload => dispatchDetail({ type: "ADD", id, payload }))
-        .catch(error => dispatchDetail({ type: "ERROR", error }));
-    }
-  };
-
-  return (
-    <Fragment>
+const App = () => (
+  <BrowserRouter>
+    <main>
       <Header />
-      <main className="px4 flex">
+      <Switch>
         <Suspense
           maxDuration={800}
-          fallback={
-            <div style={{ flex: 5 }}>
-              <h2>Recipe list is loading...</h2>
-            </div>
-          }
+          fallback={<h3 className="h2">...loading</h3>}
         >
-          <RecipeList
-            style={{ flex: 3 }}
-            recipes={recipes}
-            handleClick={onRecipeClick}
-          />
+          <Redirect from="/home" to="/" />
+          <Route exact path="/" component={Home} />
+          <Route path="/favorites" component={Favorites} />
         </Suspense>
-        <RecipeDetail
-          className="ml4"
-          style={{ flex: 5 }}
-          detail={recipeDetail[recipeDetail.current]}
-          error={recipeDetail.error}
-          loading={recipeDetail.loading}
-        />
-      </main>
-    </Fragment>
-  );
-};
+      </Switch>
+    </main>
+  </BrowserRouter>
+);
+
+export default App;
