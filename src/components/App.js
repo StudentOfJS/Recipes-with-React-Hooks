@@ -87,7 +87,7 @@ export default () => {
   return (
     <Fragment>
       <Header />
-      <main style={{ display: "flex" }}>
+      <main className="flex">
         <Suspense
           maxDuration={800}
           fallback={
