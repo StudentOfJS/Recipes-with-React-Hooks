@@ -1,25 +1,23 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import Header from './Header';
+import NotFound from './NotFound';
+import Loading from './Loading';
 
 const Home = lazy(() => import('./Home'));
 const Favorites = lazy(() => import('./Favorites'));
-const NotFound = lazy(() => import('./NotFound'));
 
 const App = () => (
   <BrowserRouter>
     <main>
       <Header />
       <Switch>
-        <Suspense
-          maxDuration={800}
-          fallback={<h3 className="h2">...loading</h3>}
-        >
-          <Redirect from="/home" to="/" />
-          <Route exact path="/" component={Home} />
+        <Redirect from="/home" to="/" />
+        <Suspense maxDuration={800} fallback={<Loading text="loading..." />}>
           <Route path="/favorites" component={Favorites} />
-          <Route component={NotFound} />
+          <Route exact path="/" component={Home} />
         </Suspense>
+        <Route component={NotFound} />
       </Switch>
     </main>
   </BrowserRouter>

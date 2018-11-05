@@ -1,5 +1,6 @@
 {
   "parser": "babel-eslint",
+  "plugins": ["react-hooks"],
   "extends": ["prettier", "airbnb"],
   "env": {
     "es6": true,
@@ -9,6 +10,7 @@
     "API_URL": true
   },
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
     "react/jsx-filename-extension": 0,
     "object-curly-newline": 0,
     "arrow-parens": 0
