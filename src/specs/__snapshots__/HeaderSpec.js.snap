@@ -4,11 +4,33 @@ exports[`<Header /> should render correctly 1`] = `
 <header
   className="flex align-center justify-between px4"
 >
-  <h1
-    className="h1"
+  <div
+    className="flex"
   >
-    my recipes
-  </h1>
+    <h1
+      className="h1"
+    >
+      my recipes
+    </h1>
+    <span
+      style={
+        Object {
+          "margin": "50px 10px",
+        }
+      }
+    >
+      <img
+        alt="food logo"
+        className="circle"
+        src="test-file-stub"
+        style={
+          Object {
+            "width": 80,
+          }
+        }
+      />
+    </span>
+  </div>
   <nav
     className="mt4"
   >

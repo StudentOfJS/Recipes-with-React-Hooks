@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import RecipeList from '../Recipe/RecipeList';
+import RecipeList from '../components/Recipe/RecipeList';
 
 const testRecipes = [
   {

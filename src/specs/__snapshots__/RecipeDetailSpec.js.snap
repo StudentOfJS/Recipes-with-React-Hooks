@@ -35,7 +35,7 @@ exports[`<RecipeDetail /> should correctly render a className 1`] = `
 </div>
 `;
 
-exports[`<RecipeDetail /> should correctly render a recipe 1`] = `
+exports[`<RecipeDetail /> should correctly render recipe detail 1`] = `
 <div
   className="p2 bg-white rounded ml4"
   style={
@@ -84,6 +84,48 @@ exports[`<RecipeDetail /> should correctly render a recipe 1`] = `
 </div>
 `;
 
+exports[`<RecipeDetail /> should render without ingredients 1`] = `
+<div
+  className="p2 bg-white rounded ml4"
+  style={
+    Object {
+      "flex": 5,
+    }
+  }
+>
+  <span>
+    <h2
+      className="h2"
+    >
+      test recipe
+    </h2>
+    <h4>
+      test category
+    </h4>
+  </span>
+  <img
+    alt="test recipe"
+    className="rounded fit"
+    src=""
+  />
+  <h3>
+    Ingredients
+  </h3>
+  <ul />
+  <h3>
+    Steps
+  </h3>
+  <ol>
+    <li>
+      step1
+    </li>
+    <li>
+      step2
+    </li>
+  </ol>
+</div>
+`;
+
 exports[`<RecipeDetail /> should render without props 1`] = `
 <div
   className="p2 bg-white rounded ml4"
@@ -112,6 +154,48 @@ exports[`<RecipeDetail /> should render without props 1`] = `
     Ingredients
   </h3>
   <ul />
+  <h3>
+    Steps
+  </h3>
+  <ol />
+</div>
+`;
+
+exports[`<RecipeDetail /> should render without steps 1`] = `
+<div
+  className="p2 bg-white rounded ml4"
+  style={
+    Object {
+      "flex": 5,
+    }
+  }
+>
+  <span>
+    <h2
+      className="h2"
+    >
+      test recipe
+    </h2>
+    <h4>
+      test category
+    </h4>
+  </span>
+  <img
+    alt="test recipe"
+    className="rounded fit"
+    src=""
+  />
+  <h3>
+    Ingredients
+  </h3>
+  <ul>
+    <li>
+      ing1
+    </li>
+    <li>
+      ing2
+    </li>
+  </ul>
   <h3>
     Steps
   </h3>

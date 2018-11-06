@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 import React, { memo } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -11,17 +12,19 @@ const RecipeDetail = memo(({ className, detail, style }) => (
     <img src={detail.image} alt={detail.name} className="rounded fit" />
     <h3>Ingredients</h3>
     <ul>
-      {detail.ingredients.map((ingredient, i) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <li key={`ingredient-${i}`}>{ingredient}</li>
-      ))}
+      {detail.ingredients &&
+        detail.ingredients.map((ingredient, i) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <li key={`ingredient-${i}`}>{ingredient}</li>
+        ))}
     </ul>
     <h3>Steps</h3>
     <ol>
-      {detail.steps.map((step, i) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <li key={`step-${i}`}>{step}</li>
-      ))}
+      {detail.steps &&
+        detail.steps.map((step, i) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <li key={`step-${i}`}>{step}</li>
+        ))}
     </ol>
   </div>
 ));
