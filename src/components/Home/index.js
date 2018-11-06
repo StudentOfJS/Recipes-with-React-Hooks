@@ -28,8 +28,6 @@ const Home = memo(
           className="ml4"
           style={{ flex: 5 }}
           detail={recipeDetail[recipeDetail.current]}
-          error={recipeDetail.error}
-          loading={recipeDetail.loading}
         />
       </main>
     </Fragment>
