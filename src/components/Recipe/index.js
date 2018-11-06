@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import RecipeDetail from './RecipeDetail';
 
 const Recipe = ({ getDetail, recipe, id }) => {
-  console.log(recipe);
   useEffect(
     () => {
       getDetail(id);
