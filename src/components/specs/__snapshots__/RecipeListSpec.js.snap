@@ -1,0 +1,296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RecipeList /> should not break when no props passed 1`] = `
+<ul
+  className="list-reset"
+  role="Menu"
+/>
+`;
+
+exports[`<RecipeList /> should render favorites correctly 1`] = `
+<ul
+  className="list-reset"
+  role="Menu"
+>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer flex"
+  >
+    <span
+      aria-checked={true}
+      aria-label="check box to favorite recipe"
+      className="checkbox-container"
+      id={1}
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="checkbox"
+      tabIndex={1}
+    >
+      <input
+        aria-label="check box to favorite recipe"
+        checked={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="checkmark"
+      />
+    </span>
+    <button
+      className="menu-button"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      tabIndex={2}
+      type="button"
+      value={1}
+    >
+      test recipe 1 - test category
+    </button>
+  </li>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer flex"
+  >
+    <span
+      aria-checked={false}
+      aria-label="check box to favorite recipe"
+      className="checkbox-container"
+      id={2}
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="checkbox"
+      tabIndex={3}
+    >
+      <input
+        aria-label="check box to favorite recipe"
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="checkmark"
+      />
+    </span>
+    <button
+      className="menu-button"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      tabIndex={4}
+      type="button"
+      value={2}
+    >
+      test recipe 2 - test category
+    </button>
+  </li>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer flex"
+  >
+    <span
+      aria-checked={false}
+      aria-label="check box to favorite recipe"
+      className="checkbox-container"
+      id={3}
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="checkbox"
+      tabIndex={5}
+    >
+      <input
+        aria-label="check box to favorite recipe"
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="checkmark"
+      />
+    </span>
+    <button
+      className="menu-button"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      tabIndex={6}
+      type="button"
+      value={3}
+    >
+      test recipe 3 - test category
+    </button>
+  </li>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer flex"
+  >
+    <span
+      aria-checked={false}
+      aria-label="check box to favorite recipe"
+      className="checkbox-container"
+      id={4}
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="checkbox"
+      tabIndex={7}
+    >
+      <input
+        aria-label="check box to favorite recipe"
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="checkmark"
+      />
+    </span>
+    <button
+      className="menu-button"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      tabIndex={8}
+      type="button"
+      value={4}
+    >
+      test recipe 4 - test category
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`<RecipeList /> should render recipes correctly 1`] = `
+<ul
+  className="list-reset"
+  role="Menu"
+>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer flex"
+  >
+    <span
+      aria-checked={false}
+      aria-label="check box to favorite recipe"
+      className="checkbox-container"
+      id={1}
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="checkbox"
+      tabIndex={1}
+    >
+      <input
+        aria-label="check box to favorite recipe"
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="checkmark"
+      />
+    </span>
+    <button
+      className="menu-button"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      tabIndex={2}
+      type="button"
+      value={1}
+    >
+      test recipe 1 - test category
+    </button>
+  </li>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer flex"
+  >
+    <span
+      aria-checked={false}
+      aria-label="check box to favorite recipe"
+      className="checkbox-container"
+      id={2}
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="checkbox"
+      tabIndex={3}
+    >
+      <input
+        aria-label="check box to favorite recipe"
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="checkmark"
+      />
+    </span>
+    <button
+      className="menu-button"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      tabIndex={4}
+      type="button"
+      value={2}
+    >
+      test recipe 2 - test category
+    </button>
+  </li>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer flex"
+  >
+    <span
+      aria-checked={false}
+      aria-label="check box to favorite recipe"
+      className="checkbox-container"
+      id={3}
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="checkbox"
+      tabIndex={5}
+    >
+      <input
+        aria-label="check box to favorite recipe"
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="checkmark"
+      />
+    </span>
+    <button
+      className="menu-button"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      tabIndex={6}
+      type="button"
+      value={3}
+    >
+      test recipe 3 - test category
+    </button>
+  </li>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer flex"
+  >
+    <span
+      aria-checked={false}
+      aria-label="check box to favorite recipe"
+      className="checkbox-container"
+      id={4}
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="checkbox"
+      tabIndex={7}
+    >
+      <input
+        aria-label="check box to favorite recipe"
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        className="checkmark"
+      />
+    </span>
+    <button
+      className="menu-button"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      tabIndex={8}
+      type="button"
+      value={4}
+    >
+      test recipe 4 - test category
+    </button>
+  </li>
+</ul>
+`;
