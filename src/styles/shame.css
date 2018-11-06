@@ -104,5 +104,6 @@
 }
 
 .checkbox-container:focus {
-  outline-color: var(--blue);
+  background: var(--blue);
+  outline: none;
 }
