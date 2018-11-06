@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should correctly render recipe 1`] = `
+<li
+  className="py2 border-bottom border-bottom-dashed pointer flex"
+>
+  <span
+    aria-checked={false}
+    aria-label="check box to favorite recipe"
+    className="checkbox-container"
+    id={1}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="checkbox"
+    tabIndex={1}
+  >
+    <input
+      aria-label="check box to favorite recipe"
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="checkmark"
+    />
+  </span>
+  <button
+    className="menu-button"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex={2}
+    type="button"
+    value={1}
+  >
+    test recipe - test category
+  </button>
+</li>
+`;
+
+exports[`<Header /> should not break if no recipe props passed 1`] = `
+<li
+  className="py2 border-bottom border-bottom-dashed pointer flex"
+>
+  <span
+    aria-checked={false}
+    aria-label="check box to favorite recipe"
+    className="checkbox-container"
+    id={0}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="checkbox"
+    tabIndex={-1}
+  >
+    <input
+      aria-label="check box to favorite recipe"
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="checkmark"
+    />
+  </span>
+  <button
+    className="menu-button"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex={0}
+    type="button"
+    value={0}
+  >
+     - 
+  </button>
+</li>
+`;
+
+exports[`<Header /> should render favorite state 1`] = `
+<li
+  className="py2 border-bottom border-bottom-dashed pointer flex"
+>
+  <span
+    aria-checked={true}
+    aria-label="check box to favorite recipe"
+    className="checkbox-container"
+    id={1}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="checkbox"
+    tabIndex={1}
+  >
+    <input
+      aria-label="check box to favorite recipe"
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="checkmark"
+    />
+  </span>
+  <button
+    className="menu-button"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    tabIndex={2}
+    type="button"
+    value={1}
+  >
+    test recipe - test category
+  </button>
+</li>
+`;

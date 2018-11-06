@@ -5,7 +5,6 @@ import { onEnterKey } from '../../utils';
 const RecipeListItem = memo(
   ({ id, name, category, favorited, onClickOrPress, onFavorite }) => {
     const onKeyPress = onEnterKey(onFavorite);
-
     return (
       <li
         key={id}
@@ -51,6 +50,15 @@ RecipeListItem.propTypes = {
   favorited: PropTypes.bool.isRequired,
   onClickOrPress: PropTypes.func.isRequired,
   onFavorite: PropTypes.func.isRequired,
+};
+
+RecipeListItem.defaultProps = {
+  id: 0,
+  category: '',
+  name: '',
+  favorited: false,
+  onClickOrPress: () => {},
+  onFavorite: () => {},
 };
 
 export default RecipeListItem;
